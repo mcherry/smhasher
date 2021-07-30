@@ -38,7 +38,7 @@ if ($file = @fopen($opts['w'], 'r')) {
 }
 die("Unable to open wordlist!\n\n");
 
-function _hashes($hashes = array()) {
+function _hashes($hashes = []) {
     if (!count($hashes)) $hashes = hash_algos();
     foreach ($hashes as $hash) $hash_names .= str_replace(",", "-", $hash).", ";
     return substr($hash_names, 0, -2);
